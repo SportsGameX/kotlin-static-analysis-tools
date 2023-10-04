@@ -16,7 +16,7 @@
     <img src="https://www.sportsgamex.com/assets/logo-b7462be5.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Android Config</h3>
+<h3 align="center">Kotlin Static Analysis Tools</h3>
 </p>
 This library is to automatically add static/code analysis to your kotlin project.
 
@@ -133,9 +133,7 @@ Make sure to add to **BOTTOM** of file & should **NOT** be nested within any blo
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://gitlab.com/ravebizz-android-training/internal-tools-and-resources/kotlin-static-analysis-tools/-/issues) for a list of proposed features (and known issues).
-
-
+See the [open issues](https://github.com/SportsGameX/kotlin-static-analysis-tools/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -148,32 +146,25 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
 
 Olay Gureje - olay.g@sportsgamex.com
 
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Detekt](https://detekt.dev)
-* [Ktlint](https://pinterest.github.io/ktlint/)
-* [Kotlin style guide](https://developer.android.com/kotlin/style-guide)
-
+* [Ktlint](https://pinterest.github.io/ktlint/)\
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://gitlab.com/ravebizz-android-training/internal-tools-and-resources/kotlin-static-analysis-tools/-/blob/main/LICENSE
+[license-url]: https://github.com/SportsGameX/kotlin-static-analysis-tools/blob/main/LICENSE
 [detekt-logo]: https://detekt.dev/img/favicon.svg
 [ktlint-logo]: https://cloud.githubusercontent.com/assets/370176/26518284/38b680da-4262-11e7-8d27-2b9e849fb55f.png
