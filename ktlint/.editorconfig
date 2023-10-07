@@ -1,0 +1,4 @@
+[*.{kt,kts}]
+compose_allowed_composition_locals = LocalSafeArea, LocalDarkMode, LocalWindowPaddingSetting, LocalScaffoldOptions
+# Disable ktlint rule for Compose functions (standard:function-naming)
+ktlint_standard_function-naming = disabled
