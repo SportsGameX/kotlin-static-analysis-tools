@@ -2,6 +2,7 @@ val detekt by configurations.creating
 
 val detektTask =
     tasks.register<JavaExec>("detekt") {
+        dependsOn("ktlintCheck")
         mainClass.set("io.gitlab.arturbosch.detekt.cli.Main")
         classpath = detekt
 
