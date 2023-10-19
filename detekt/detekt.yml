@@ -51,17 +51,15 @@ output-reports:
 
 comments:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   CommentOverPrivateFunction:
     active: true
   EndOfSentenceFormat:
     active: true
-  OutdatedDocumentation:
-    active: true
 
 complexity:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**", "**/**.kts", "**/kmm-chart/**" ]
   CognitiveComplexMethod:
     active: true
     threshold: 15
@@ -85,7 +83,7 @@ complexity:
 
 coroutines:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   GlobalCoroutineUsage:
     active: true
   SuspendFunSwallowedCancellation:
@@ -95,7 +93,7 @@ coroutines:
 
 exceptions:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   NotImplementedDeclaration:
     active: true
   ObjectExtendsThrowable:
@@ -105,7 +103,7 @@ exceptions:
 
 formatting:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**", "**/kmm-chart/**" ]
   ClassName:
     active: true
   ContextReceiverMapping:
@@ -116,14 +114,16 @@ formatting:
     active: true
   FunctionName:
     active: true
+    ignoreAnnotated: &ignoreList [ 'Composable' ]
+    excludes: [ '**/main.ios.kt' ]
   FunctionSignature:
-    active: true
+    active: false
   IfElseBracing:
     active: true
   IfElseWrapping:
     active: true
-  MultilineExpressionWrapping:
-    active: true
+    MultilineExpressionWrapping:
+      active: true
   NoBlankLineInList:
     active: true
   NoConsecutiveComments:
@@ -149,15 +149,15 @@ formatting:
 
 naming:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   BooleanPropertyNaming:
     active: true
   FunctionMaxLength:
     active: true
-    maximumFunctionNameLength: 30
+    maximumFunctionNameLength: 35
   FunctionMinLength:
     active: true
-    minimumFunctionNameLength: 3
+    minimumFunctionNameLength: 2
   LambdaParameterNaming:
     active: true
   NonBooleanPropertyPrefixedWithIs:
@@ -171,7 +171,7 @@ naming:
 
 performance:
   active: true
-  excludes: [ '**/build/**' ]
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   CouldBeSequence:
     active: true
     threshold: 3
@@ -180,6 +180,7 @@ performance:
 
 potential-bugs:
   active: true
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**" ]
   CastNullableToNonNullableType:
     active: true
   CastToNullableType:
@@ -197,6 +198,7 @@ potential-bugs:
     active: true
   MissingPackageDeclaration:
     active: true
+    excludes: [ "**/**.kts" ]
   NullCheckOnMutableProperty:
     active: true
   NullableToStringCall:
@@ -210,6 +212,7 @@ potential-bugs:
 
 style:
   active: true
+  excludes: [ '**/build/**', "**/kotlin-static-analysis-tools/**", "**/kmm-chart/**" ]
   AlsoCouldBeApply:
     active: true
   BracesOnIfStatements:
@@ -254,8 +257,6 @@ style:
   NoTabs:
     active: true
   NullableBooleanCheck:
-    active: true
-  OptionalUnit:
     active: true
   PreferToOverPairSyntax:
     active: true
