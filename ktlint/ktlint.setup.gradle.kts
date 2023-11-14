@@ -10,7 +10,7 @@ dependencies {
 }
 
 val outputDir = "${project.layout.buildDirectory}/reports/ktlint/"
-val inputFiles = project.fileTree("src") { include("**/*.kt") }
+val inputFiles = projectDir
 
 val ktlintCheck by tasks.creating(JavaExec::class) {
     inputs.files(
