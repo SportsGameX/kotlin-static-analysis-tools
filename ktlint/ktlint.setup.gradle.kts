@@ -13,9 +13,7 @@ val outputDir = "${project.layout.buildDirectory}/reports/ktlint/"
 val inputFiles = projectDir
 
 val ktlintCheck by tasks.creating(JavaExec::class) {
-    inputs.files(
-        inputFiles,
-    )
+    inputs.files(inputFiles)
     outputs.dir(outputDir)
 
     group = LifecycleBasePlugin.VERIFICATION_GROUP
