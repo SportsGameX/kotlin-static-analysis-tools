@@ -10,14 +10,11 @@ dependencies {
 }
 
 val outputDir = "${project.layout.buildDirectory}/reports/ktlint/"
-val inputFiles = projectDir
+val inputFiles = project.fileTree("src") { include("**/*.kt") }
 
 val ktlintCheck by tasks.creating(JavaExec::class) {
     inputs.files(
         inputFiles,
-        project.tasks.getByPath(":androidApp:createDebugVariantModel").outputs,
-        project.tasks.getByPath(":androidApp:generateProjectStructureMetadata").outputs,
-        project.tasks.getByPath(":androidApp:allMetadataJar").outputs,
     )
     outputs.dir(outputDir)
 
