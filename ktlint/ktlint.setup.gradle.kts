@@ -13,6 +13,7 @@ val outputDir = "${project.layout.buildDirectory}/reports/ktlint/"
 val inputFiles = projectDir
 
 val ktlintCheck by tasks.creating(JavaExec::class) {
+    dependsOn(":xcodeVersion")
     inputs.files(
         inputFiles,
         project.tasks.getByPath(":androidApp:createDebugVariantModel").outputs,
