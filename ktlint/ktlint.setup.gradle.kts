@@ -1,7 +1,7 @@
 val ktlint by configurations.creating
 
 dependencies {
-    ktlint("com.pinterest.ktlint:ktlint-cli:1.0.0") {
+    ktlint("com.pinterest.ktlint:ktlint-cli:1.2.1") {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling.EXTERNAL))
         }
@@ -14,12 +14,7 @@ val inputFiles = projectDir
 
 val ktlintCheck by tasks.creating(JavaExec::class) {
     dependsOn(":xcodeVersion")
-    inputs.files(
-        inputFiles,
-        project.tasks.getByPath(":androidApp:createDebugVariantModel").outputs,
-        project.tasks.getByPath(":androidApp:generateProjectStructureMetadata").outputs,
-        project.tasks.getByPath(":androidApp:allMetadataJar").outputs,
-    )
+    inputs.files(inputFiles)
     outputs.dir(outputDir)
 
     group = LifecycleBasePlugin.VERIFICATION_GROUP
